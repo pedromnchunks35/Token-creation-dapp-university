@@ -1,3 +1,4 @@
+require('dotenv').config()
 const HDWalletProvider = require("@truffle/hdwallet-provider"); 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -49,7 +50,7 @@ module.exports = {
      },
      rinkeby:{
       provider: () => new HDWalletProvider({
-      privateKeys: ['00cf83239bde43a065e1c27af163ced8329cbf907d01168fa71d6cd0cf76b3b4'],
+      privateKeys: [process.env.PRIVATE],
       providerOrUrl: 'https://rinkeby.infura.io/v3/ffa0ca21d5a543e791026bf4e6ae6dc9',
       numberOfAddress: 1
       }),
